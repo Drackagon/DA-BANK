@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://bddtakrvwks4o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nuy6j"]
+size = Vector2(418, 722)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_upo51"]
+load_path = "res://.godot/imported/idle_0.png-8a52100d114c0946e29654f41230921d.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nwubq"]
+load_path = "res://.godot/imported/idle_1.png-615d9686f0107a4473ce44c1d2bae177.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iqhtf"]
+load_path = "res://.godot/imported/idle_2.png-838d9af652a2a35effa44e482aff6068.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_13p12"]
+load_path = "res://.godot/imported/idle_3.png-0963a591c908ce5151e5496d5d8c0f7b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rjasq"]
+load_path = "res://.godot/imported/idle_4.png-2611d14fa580c6e737077cde89825d90.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0mydc"]
+load_path = "res://.godot/imported/idle_5.png-73665673a5eba98344821e42fcdc5b5b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qcsqt"]
+load_path = "res://.godot/imported/walk_0.png-4de120a01d5cf547fd6683a752a4bb69.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hp04w"]
+load_path = "res://.godot/imported/walk_1.png-a9f433e233bf01f0fa0bd2319a890da3.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w6uwg"]
+load_path = "res://.godot/imported/walk_2.png-f6675ff994e439a3edb2455a95c7558d.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qi73v"]
+load_path = "res://.godot/imported/walk_3.png-a941a282681986cc53d032b06bb54208.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2w1db"]
+load_path = "res://.godot/imported/walk_4.png-ae05fc8e015d485714cab1b35f674b3f.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bcfu5"]
+load_path = "res://.godot/imported/walk_5.png-5ef9cf0a1985d1b490b49ee9cb9309f2.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2hhuf"]
+load_path = "res://.godot/imported/walk_6.png-9ef2d67ff242291428bdfaee217c025d.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_scii7"]
+load_path = "res://.godot/imported/walk_7.png-96d416265079dff7155178783e2d1bc9.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nuy6j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_upo51")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_nwubq")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_iqhtf")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_13p12")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_rjasq")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_0mydc")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_qcsqt")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_hp04w")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_w6uwg")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_qi73v")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_2w1db")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_bcfu5")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_2hhuf")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_scii7")
+}],
+"loop": 1,
+"name": &"Walk",
+"speed": 10.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=598158233]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=374282663]
+position = Vector2(25, -362)
+shape = SubResource("RectangleShape2D_nuy6j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1874086834]
+position = Vector2(24, -765)
+sprite_frames = SubResource("SpriteFrames_nuy6j")
+animation = &"Walk"
+autoplay = "Walk"
+frame_progress = 0.7405366

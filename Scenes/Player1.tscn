@@ -126,7 +126,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"Idel",
-"speed": 20.0
+"speed": 60.0
 }, {
 "frames": [],
 "loop": 1,
@@ -135,18 +135,20 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nuy6j"]
-size = Vector2(418, 722)
+size = Vector2(396, 619)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=598158233]
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=384189409]
+position = Vector2(-843, -311)
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1271024785]
-position = Vector2(21, -767)
+position = Vector2(-846, -333)
 sprite_frames = SubResource("SpriteFrames_nuy6j")
 animation = &"Idel"
-frame_progress = 0.1791286
+autoplay = "Idel"
+frame_progress = 0.06281813
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=374282663]
-position = Vector2(25, -362)
+position = Vector2(-843, -312)
 shape = SubResource("RectangleShape2D_nuy6j")
-
-[node name="Node2D" type="Node2D" parent="." unique_id=7629037]

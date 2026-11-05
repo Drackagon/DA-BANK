@@ -1,6 +1,10 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
+<<<<<<< HEAD
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DA-Bank", "DA-Bank.csproj", "{76360FD6-AD68-49E9-9897-1B4F3E41E0CE}"
+=======
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DA-Bank", "DA-Bank.csproj", "{193525AF-A25F-49BB-B4F8-E5C67764BF17}"
+>>>>>>> a4dd195dbdaf9e01e83a8deb403650f894807350
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,11 +13,20 @@ Global
 	ExportRelease|Any CPU = ExportRelease|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+<<<<<<< HEAD
+		{76360FD6-AD68-49E9-9897-1B4F3E41E0CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76360FD6-AD68-49E9-9897-1B4F3E41E0CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76360FD6-AD68-49E9-9897-1B4F3E41E0CE}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{76360FD6-AD68-49E9-9897-1B4F3E41E0CE}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{76360FD6-AD68-49E9-9897-1B4F3E41E0CE}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{76360FD6-AD68-49E9-9897-1B4F3E41E0CE}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+=======
 		{193525AF-A25F-49BB-B4F8-E5C67764BF17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{193525AF-A25F-49BB-B4F8-E5C67764BF17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{193525AF-A25F-49BB-B4F8-E5C67764BF17}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
 		{193525AF-A25F-49BB-B4F8-E5C67764BF17}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
 		{193525AF-A25F-49BB-B4F8-E5C67764BF17}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
 		{193525AF-A25F-49BB-B4F8-E5C67764BF17}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+>>>>>>> a4dd195dbdaf9e01e83a8deb403650f894807350
 	EndGlobalSection
 EndGlobal

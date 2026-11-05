@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bddtakrvwks4o"]
 
+[ext_resource type="Script" uid="uid://cn04blr43ksvy" path="res://Scenes/Player2.cs" id="1_0mydc"]
 [ext_resource type="Texture2D" uid="uid://bs0g4jddmah6g" path="res://Assets/Player/atlas/female_villager_walk_down.png" id="1_rjasq"]
 [ext_resource type="Texture2D" uid="uid://b413khlcbsrjf" path="res://Assets/Player/atlas/female_villager_walk_up.png" id="2_0mydc"]
 [ext_resource type="Texture2D" uid="uid://c2r0kfgfb8s3a" path="res://Assets/Player/atlas/female_villager_walk_left.png" id="3_qcsqt"]
@@ -145,13 +146,16 @@ radius = 7.5
 height = 26.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=377428219]
+script = ExtResource("1_0mydc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=560242652]
 position = Vector2(0.5, -1.5)
 sprite_frames = SubResource("SpriteFrames_e6ht7")
 animation = &"Left"
-frame_progress = 0.8096745
+frame_progress = 0.45349586
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=736215192]
 position = Vector2(-0.5, -2)
 shape = SubResource("CapsuleShape2D_m7m4b")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1952907133]

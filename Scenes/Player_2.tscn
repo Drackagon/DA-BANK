@@ -22,21 +22,9 @@ region = Rect2(128, 0, 64, 64)
 atlas = ExtResource("1_rjasq")
 region = Rect2(192, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2hhuf"]
-atlas = ExtResource("2_0mydc")
+[sub_resource type="AtlasTexture" id="AtlasTexture_0mydc"]
+atlas = ExtResource("1_rjasq")
 region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_scii7"]
-atlas = ExtResource("2_0mydc")
-region = Rect2(64, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_343v7"]
-atlas = ExtResource("2_0mydc")
-region = Rect2(128, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_on1d2"]
-atlas = ExtResource("2_0mydc")
-region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qi357"]
 atlas = ExtResource("3_qcsqt")
@@ -70,6 +58,22 @@ region = Rect2(128, 0, 64, 64)
 atlas = ExtResource("4_hp04w")
 region = Rect2(192, 0, 64, 64)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hhuf"]
+atlas = ExtResource("2_0mydc")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_scii7"]
+atlas = ExtResource("2_0mydc")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_343v7"]
+atlas = ExtResource("2_0mydc")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_on1d2"]
+atlas = ExtResource("2_0mydc")
+region = Rect2(192, 0, 64, 64)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_e6ht7"]
 animations = [{
 "frames": [{
@@ -86,24 +90,15 @@ animations = [{
 "texture": SubResource("AtlasTexture_bcfu5")
 }],
 "loop": 1,
-"name": &"Back",
+"name": &"Down",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2hhuf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_scii7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_343v7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_on1d2")
+"texture": SubResource("AtlasTexture_0mydc")
 }],
 "loop": 1,
-"name": &"Foward",
+"name": &"Idle",
 "speed": 5.0
 }, {
 "frames": [{
@@ -139,6 +134,23 @@ animations = [{
 "loop": 1,
 "name": &"Right",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2hhuf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_scii7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_343v7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_on1d2")
+}],
+"loop": 1,
+"name": &"Up",
+"speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m7m4b"]
@@ -151,8 +163,8 @@ script = ExtResource("1_0mydc")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=560242652]
 position = Vector2(0.5, -1.5)
 sprite_frames = SubResource("SpriteFrames_e6ht7")
-animation = &"Left"
-frame_progress = 0.45349586
+animation = &"Down"
+autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=736215192]
 position = Vector2(-0.5, -2)

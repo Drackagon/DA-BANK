@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ud6qafn3xjbi" path="res://Assets/Player/atlas/village_man_walk_left.png" id="2_okep5"]
 [ext_resource type="Texture2D" uid="uid://brtircmum7g7d" path="res://Assets/Player/atlas/village_man_walk_right.png" id="3_um20x"]
 [ext_resource type="Texture2D" uid="uid://c3xq56xj0m5e6" path="res://Assets/Player/atlas/village_man_idle_up.png" id="4_701bs"]
+[ext_resource type="PackedScene" uid="uid://bddtakrvwks4o" path="res://Scenes/Player_2.tscn" id="5_okep5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xc2ir"]
 atlas = ExtResource("1_456kv")
@@ -180,3 +181,6 @@ animation = &"Down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=725517325]
 shape = SubResource("CapsuleShape2D_nuy6j")
+
+[node name="CharacterBody2D" parent="." unique_id=377428219 instance=ExtResource("5_okep5")]
+position = Vector2(69, 5)

@@ -11,12 +11,8 @@ config_version=5
 [application]
 
 config/name="DA-Bank"
-<<<<<<< HEAD
-run/main_scene="uid://c37uekc3y2in1"
-=======
 run/main_scene="uid://bb00wmlkfe44y"
->>>>>>> dc2358120ac5126a2bf2f6267f10d614c78dbfea
-config/features=PackedStringArray("4.7", "C#", "Forward Plus")
+config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]

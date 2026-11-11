@@ -154,20 +154,21 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m7m4b"]
-radius = 7.5
-height = 26.0
+radius = 16.0
+height = 50.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=377428219]
 script = ExtResource("1_0mydc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=560242652]
-position = Vector2(0.5, -1.5)
+position = Vector2(-1, 0)
+scale = Vector2(2.0703125, 2.0703125)
 sprite_frames = SubResource("SpriteFrames_e6ht7")
-animation = &"Down"
+animation = &"Idle"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=736215192]
-position = Vector2(-0.5, -2)
+position = Vector2(-4, 1)
 shape = SubResource("CapsuleShape2D_m7m4b")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1952907133]

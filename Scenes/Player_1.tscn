@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://c37uekc3y2in1"]
 
 [ext_resource type="Texture2D" uid="uid://bybyfetsx104g" path="res://Assets/Player/atlas/village_man_walk_down.png" id="1_456kv"]
-[ext_resource type="Script" uid="uid://cjln8rf3utsn" path="res://Scenes/Player1.cs" id="1_um20x"]
+[ext_resource type="Script" uid="uid://cjln8rf3utsn" path="res://Scripts/Player1.cs" id="1_um20x"]
 [ext_resource type="Texture2D" uid="uid://ud6qafn3xjbi" path="res://Assets/Player/atlas/village_man_walk_left.png" id="2_okep5"]
+[ext_resource type="Texture2D" uid="uid://by4urdpks3qcm" path="res://Assets/Player/atlas/village_man_walk_up.png" id="3_701bs"]
 [ext_resource type="Texture2D" uid="uid://brtircmum7g7d" path="res://Assets/Player/atlas/village_man_walk_right.png" id="3_um20x"]
 [ext_resource type="Texture2D" uid="uid://c3xq56xj0m5e6" path="res://Assets/Player/atlas/village_man_idle_up.png" id="4_701bs"]
-[ext_resource type="PackedScene" uid="uid://bddtakrvwks4o" path="res://Scenes/Player_2.tscn" id="5_okep5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xc2ir"]
 atlas = ExtResource("1_456kv")
@@ -22,6 +22,10 @@ region = Rect2(128, 0, 64, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ibpet"]
 atlas = ExtResource("1_456kv")
 region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbeme"]
+atlas = ExtResource("3_701bs")
+region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2p0e2"]
 atlas = ExtResource("2_okep5")
@@ -108,6 +112,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_wbeme")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_2p0e2")
 }, {
 "duration": 1.0,
@@ -171,18 +183,18 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nuy6j"]
-radius = 9.0
-height = 28.0
+radius = 17.0
+height = 50.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=444781210]
 script = ExtResource("1_um20x")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=767104151]
+scale = Vector2(2.1796875, 2.1796875)
 sprite_frames = SubResource("SpriteFrames_nuy6j")
-animation = &"Down"
+animation = &"Idle"
+autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=725517325]
+position = Vector2(1, 4)
 shape = SubResource("CapsuleShape2D_nuy6j")
-
-[node name="CharacterBody2D" parent="." unique_id=377428219 instance=ExtResource("5_okep5")]
-position = Vector2(69, 5)

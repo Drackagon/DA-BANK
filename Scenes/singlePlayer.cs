@@ -8,9 +8,19 @@ public partial class singlePlayer : Button
 	{
 		Text = "Single-Player";
 		Pressed += ButtonPressed;
+		GrabFocus();
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+		if (HasFocus() == true)
+		{
+			GD.Print(Text + " is focused");
+		}
+	}
+	
 	private void ButtonPressed()
 	{
 		GD.Print("Button pressed: " + Text); 

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://coxe2yxmasp8a"]
 
+[ext_resource type="Script" uid="uid://ddfcitpogrgm6" path="res://Scripts/Player3.cs" id="1_6drji"]
 [ext_resource type="Texture2D" uid="uid://b0cysx3slnld1" path="res://Assets/Player/spritesheets/$blacksmith.png" id="1_epnrr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nuy6j"]
@@ -126,6 +127,7 @@ animations = [{
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=444781210]
+script = ExtResource("1_6drji")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=725517325]
 position = Vector2(0, 6)

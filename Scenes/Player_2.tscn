@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bddtakrvwks4o"]
+[gd_scene format=3 uid="uid://bdh35k6es62ux"]
 
 [ext_resource type="Script" uid="uid://cn04blr43ksvy" path="res://Scripts/Player2.cs" id="1_0mydc"]
 [ext_resource type="Texture2D" uid="uid://bs0g4jddmah6g" path="res://Assets/Player/atlas/female_villager_walk_down.png" id="1_rjasq"]

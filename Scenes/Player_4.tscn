@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dondvddv0uflc"]
 
-[ext_resource type="Texture2D" path="res://Assets/Player/spritesheets/$mayor.png" id="1_382hy"]
+[ext_resource type="Texture2D" uid="uid://0u0ww8bdaqib" path="res://Assets/Player/spritesheets/$mayor.png" id="1_382hy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nuy6j"]
-radius = 17.0
-height = 52.0
+radius = 21.0
+height = 56.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3wyh8"]
 atlas = ExtResource("1_382hy")
@@ -17,6 +17,10 @@ region = Rect2(48, 0, 48, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_fa5ok"]
 atlas = ExtResource("1_382hy")
 region = Rect2(96, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_382hy"]
+atlas = ExtResource("1_382hy")
+region = Rect2(48, 0, 48, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ghwcq"]
 atlas = ExtResource("1_382hy")
@@ -72,6 +76,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_382hy")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_ghwcq")
 }, {
 "duration": 1.0,
@@ -116,10 +128,10 @@ animations = [{
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=444781210]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=725517325]
-position = Vector2(0, 6)
+position = Vector2(0, 4)
 shape = SubResource("CapsuleShape2D_nuy6j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=779818048]
 sprite_frames = SubResource("SpriteFrames_nuy6j")
-animation = &"Down"
-frame_progress = 0.22042249
+animation = &"Idle"
+autoplay = "Idle"

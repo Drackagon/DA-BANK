@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://coxe2yxmasp8a"]
 
-[ext_resource type="Texture2D" path="res://Assets/Player/spritesheets/$little_boy.png" id="1_epnrr"]
+[ext_resource type="Texture2D" uid="uid://b0cysx3slnld1" path="res://Assets/Player/spritesheets/$blacksmith.png" id="1_epnrr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nuy6j"]
 radius = 17.0
@@ -20,37 +20,41 @@ region = Rect2(96, 0, 48, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5hltu"]
 atlas = ExtResource("1_epnrr")
-region = Rect2(0, 64, 48, 64)
+region = Rect2(48, 0, 48, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jtao0"]
 atlas = ExtResource("1_epnrr")
-region = Rect2(48, 64, 48, 64)
+region = Rect2(0, 64, 48, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ddvqo"]
 atlas = ExtResource("1_epnrr")
-region = Rect2(96, 64, 48, 64)
+region = Rect2(48, 64, 48, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7ke6l"]
 atlas = ExtResource("1_epnrr")
-region = Rect2(0, 128, 48, 64)
+region = Rect2(96, 64, 48, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rq1g5"]
 atlas = ExtResource("1_epnrr")
-region = Rect2(48, 128, 48, 64)
+region = Rect2(0, 128, 48, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_odox1"]
 atlas = ExtResource("1_epnrr")
-region = Rect2(96, 128, 48, 64)
+region = Rect2(48, 128, 48, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_erxne"]
 atlas = ExtResource("1_epnrr")
-region = Rect2(0, 192, 48, 64)
+region = Rect2(96, 128, 48, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1yqws"]
 atlas = ExtResource("1_epnrr")
-region = Rect2(48, 192, 48, 64)
+region = Rect2(0, 192, 48, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8hrje"]
+atlas = ExtResource("1_epnrr")
+region = Rect2(48, 192, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hc5x5"]
 atlas = ExtResource("1_epnrr")
 region = Rect2(96, 192, 48, 64)
 
@@ -73,12 +77,20 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5hltu")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jtao0")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ddvqo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ke6l")
 }],
 "loop": 1,
 "name": &"Left",
@@ -86,13 +98,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7ke6l")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_rq1g5")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_odox1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_erxne")
 }],
 "loop": 1,
 "name": &"Right",
@@ -100,13 +112,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_erxne")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_1yqws")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8hrje")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hc5x5")
 }],
 "loop": 1,
 "name": &"Up",
@@ -121,4 +133,5 @@ shape = SubResource("CapsuleShape2D_nuy6j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=279392041]
 sprite_frames = SubResource("SpriteFrames_nuy6j")
-animation = &"Left"
+animation = &"Idle"
+autoplay = "Idle"

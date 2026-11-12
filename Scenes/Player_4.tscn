@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://16b3g1k7agq1" path="res://Scripts/Player4.cs" id="1_3wyh8"]
 [ext_resource type="Texture2D" uid="uid://0u0ww8bdaqib" path="res://Assets/Player/spritesheets/$mayor.png" id="1_382hy"]
-[ext_resource type="PackedScene" uid="uid://coxe2yxmasp8a" path="res://Scenes/Player_3.tscn" id="2_3wyh8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nuy6j"]
 radius = 21.0
@@ -136,8 +135,5 @@ shape = SubResource("CapsuleShape2D_nuy6j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=779818048]
 sprite_frames = SubResource("SpriteFrames_nuy6j")
-animation = &"Left"
+animation = &"Idle"
 autoplay = "Idle"
-
-[node name="CharacterBody2D" parent="." unique_id=597840666 instance=ExtResource("2_3wyh8")]
-position = Vector2(54, -2)

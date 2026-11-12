@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://s1y7su74vicc"]
+
+[ext_resource type="Script" uid="uid://f7hu8lrqtfob" path="res://Scenes/singlePlayer.cs" id="1_28flt"]
+[ext_resource type="Script" uid="uid://bbbk3ijyvqh3n" path="res://Scenes/multiPlayer.cs" id="2_48xlc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ehe0"]
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ce3w2"]
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="mainMenu" type="Node2D" unique_id=1395308694]
+
+[node name="Control" type="Control" parent="." unique_id=875288539]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="singlePlayer" type="Button" parent="Control" unique_id=1636486057]
+clip_contents = true
+layout_mode = 1
+offset_left = 476.0
+offset_top = 248.0
+offset_right = 676.0
+offset_bottom = 291.0
+focus_neighbor_bottom = NodePath("../multiPlayer")
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_1ehe0")
+text = "Single-Player"
+script = ExtResource("1_28flt")
+metadata/_edit_use_anchors_ = true
+
+[node name="multiPlayer" type="Button" parent="Control" unique_id=836935347]
+clip_contents = true
+layout_mode = 1
+offset_left = 476.0
+offset_top = 310.0
+offset_right = 676.0
+offset_bottom = 353.0
+focus_neighbor_top = NodePath("../singlePlayer")
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_ce3w2")
+text = "Multi-Player"
+script = ExtResource("2_48xlc")

@@ -19,7 +19,7 @@ public partial class multiPlayer : Button
     
     private void ButtonPressed()
     {
-        GD.Print("Button pressed: " + Text); 
+        GD.Print("Button pressed: " + Text);
         GetTree().ChangeSceneToFile("res://Scenes/map.tscn");
     }
 }

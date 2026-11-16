@@ -135,6 +135,7 @@ position = Vector2(0, 4)
 shape = SubResource("CapsuleShape2D_nuy6j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=779818048]
+position = Vector2(-90, 36)
 sprite_frames = SubResource("SpriteFrames_nuy6j")
 animation = &"Left"
 autoplay = "Idle"

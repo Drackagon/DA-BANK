@@ -9,15 +9,12 @@ public partial class multiPlayer : Button
         Text = "Multi-Player";
         Pressed += ButtonPressed;
         GrabFocus();
+        
     }
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(double delta)
     {
-        if (HasFocus() == true)
-        {
-            GD.Print(Text + " is focused");
-        }
     }
     
     private void ButtonPressed()

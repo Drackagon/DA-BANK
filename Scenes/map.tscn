@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dkta5cne0x1q1" path="res://Assets/Interior/Interiors_free/32x32/Interiors_free_32x32.png" id="1_26yhd"]
 [ext_resource type="Texture2D" uid="uid://bj0xoa8uaopbt" path="res://Assets/Interior/Interiors_free/32x32/Room_Builder_free_32x32.png" id="2_p3ir5"]
+[ext_resource type="PackedScene" uid="uid://b5pw2dix03ifb" path="res://Scenes/split_screen.tscn" id="3_myvm1"]
+[ext_resource type="PackedScene" uid="uid://bblgvcugimtjx" path="res://Scenes/Player1.tscn" id="4_q0mm3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_myvm1"]
 texture = ExtResource("1_26yhd")
@@ -9083,3 +9085,7 @@ tile_set = SubResource("TileSet_20dwi")
 z_index = 2
 tile_map_data = PackedByteArray("AAAZAAgAAAABABQAAAAZAAkAAAABABUAAAAZAAoAAAABABYAAAAZAAsAAAABABcAAAAZAAwAAAABABgAAAAaAAgAAAACABQAAAAaAAkAAAACABUAAAAaAAoAAAACABYAAAAaAAsAAAACABcAAAAaAAwAAAACABgAAAAbAAgAAAADABQAAAAbAAkAAAADABUAAAAbAAoAAAADABYAAAAbAAsAAAADABcAAAAbAAwAAAADABgAAAAcAAgAAAAEABQAAAAcAAkAAAAEABUAAAAcAAoAAAAEABYAAAAcAAsAAAAEABcAAAAcAAwAAAAEABgAAAAdAAgAAAAFABQAAAAdAAkAAAAFABUAAAAdAAoAAAAFABYAAAAdAAsAAAAFABcAAAAdAAwAAAAFABgAAAAeAAgAAAAGABQAAAAeAAkAAAAGABUAAAAeAAoAAAAGABYAAAAeAAsAAAAGABcAAAAeAAwAAAAGABgAAAAfAAsAAAAOACwAAAAfAAwAAAAOAC0AAAAgAAkAAAAPAC0AAAAgAAoAAAAPACsAAAAgAAsAAAAPACwAAAAgAAwAAAAPAC0AAAAfAAkAAAAOAC0AAAAgAAcAAAAPACsAAAAgAAgAAAAPACwAAAAfAAgAAAAOACwAAAAgAAYAAAAPACoAAAAXAAkAAAAMAC0AAAAXAAoAAAAMACsAAAAXAAsAAAAMACwAAAAXAAwAAAAMAC0AAAAYAAsAAAANACwAAAAYAAwAAAANAC0AAAAXAAYAAAAMACoAAAAXAAcAAAAMACsAAAAXAAgAAAAMACwAAAAYAAgAAAANACwAAAAYAAkAAAANAC0AAAA=")
 tile_set = SubResource("TileSet_v5o43")
+
+[node name="SplitScreen" parent="." unique_id=1887253957 instance=ExtResource("3_myvm1")]
+
+[node name="CharacterBody2D" parent="." unique_id=598158233 instance=ExtResource("4_q0mm3")]

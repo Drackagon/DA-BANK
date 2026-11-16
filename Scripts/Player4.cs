@@ -4,6 +4,10 @@ using System;
 public partial class Player4 : CharacterBody2D
 {
 	public const float Speed = 300.0f;
+	public const float Deadzone = 0.2f;
+
+	[Export]
+	public int DeviceId { get; set; } = 3;
 
 	private AnimatedSprite2D _animatedSprite;
 
@@ -16,11 +20,23 @@ public partial class Player4 : CharacterBody2D
 	{
 		Vector2 velocity = Velocity;
 
-		Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
-		
+		Vector2 direction = new Vector2(
+			Input.GetJoyAxis(DeviceId, JoyAxis.LeftX),
+			Input.GetJoyAxis(DeviceId, JoyAxis.LeftY)
+		);
+
+		if (direction.Length() < Deadzone)
+		{
+			direction = Vector2.Zero;
+		}
+		else
+		{
+			direction = direction.Normalized();
+		}
+
 		if (direction == Vector2.Zero)
 		{
-			_animatedSprite.Play("Idle"); 
+			_animatedSprite.Play("Idle");
 		}
 		else
 		{
@@ -29,12 +45,12 @@ public partial class Player4 : CharacterBody2D
 				if (direction.X > 0)
 				{
 					_animatedSprite.Play("Right");
-					_animatedSprite.FlipH = false; 
+					_animatedSprite.FlipH = false;
 				}
 				else if (direction.X < 0)
 				{
 					_animatedSprite.Play("Left");
-					_animatedSprite.FlipH = false; 
+					_animatedSprite.FlipH = false;
 				}
 			}
 			else

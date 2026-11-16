@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bddtakrvwks4o"]
+[gd_scene format=3 uid="uid://bdh35k6es62ux"]
 
 [ext_resource type="Script" uid="uid://cn04blr43ksvy" path="res://Scripts/Player2.cs" id="1_0mydc"]
 [ext_resource type="Texture2D" uid="uid://bs0g4jddmah6g" path="res://Assets/Player/atlas/female_villager_walk_down.png" id="1_rjasq"]
@@ -170,5 +170,3 @@ autoplay = "Idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=736215192]
 position = Vector2(-4, 1)
 shape = SubResource("CapsuleShape2D_m7m4b")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1952907133]

@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://b5pw2dix03ifb"]
+
+[node name="SplitScreen" type="CanvasLayer" unique_id=423324856]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1878020119]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="VBoxContainer" unique_id=824439886]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SubViewport0" type="SubViewport" parent="VBoxContainer/SubViewportContainer" unique_id=77374452]
+unique_name_in_owner = true
+handle_input_locally = false
+size = Vector2i(1280, 360)
+render_target_update_mode = 4
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer" unique_id=1745343177]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="VBoxContainer" unique_id=1218720477]
+layout_mode = 2
+
+[node name="SubViewport1" type="SubViewport" parent="VBoxContainer/SubViewportContainer2" unique_id=107455163]
+handle_input_locally = false
+size = Vector2i(1280, 360)
+render_target_update_mode = 4

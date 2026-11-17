@@ -182,11 +182,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nuy6j"]
-radius = 17.0
-height = 50.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3wyh8"]
+size = Vector2(22, 34)
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=444781210]
+[node name="CharacterBody2D2" type="CharacterBody2D" unique_id=444781210]
+collision_layer = 2
 script = ExtResource("1_um20x")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=767104151]
@@ -196,5 +196,5 @@ animation = &"Idle"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=725517325]
-position = Vector2(1, 4)
-shape = SubResource("CapsuleShape2D_nuy6j")
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_3wyh8")

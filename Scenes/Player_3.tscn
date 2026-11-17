@@ -3,10 +3,6 @@
 [ext_resource type="Script" uid="uid://ddfcitpogrgm6" path="res://Scripts/Player3.cs" id="1_6drji"]
 [ext_resource type="Texture2D" uid="uid://b0cysx3slnld1" path="res://Assets/Player/spritesheets/$blacksmith.png" id="1_epnrr"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nuy6j"]
-radius = 17.0
-height = 52.0
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_6drji"]
 atlas = ExtResource("1_epnrr")
 region = Rect2(0, 0, 48, 64)
@@ -126,14 +122,18 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=444781210]
-script = ExtResource("1_6drji")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wxm5j"]
+size = Vector2(23, 37)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=725517325]
-position = Vector2(0, 6)
-shape = SubResource("CapsuleShape2D_nuy6j")
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=444781210]
+collision_layer = 2
+script = ExtResource("1_6drji")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=279392041]
 sprite_frames = SubResource("SpriteFrames_nuy6j")
 animation = &"Idle"
 autoplay = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=143346130]
+position = Vector2(0.5, 11.5)
+shape = SubResource("RectangleShape2D_wxm5j")

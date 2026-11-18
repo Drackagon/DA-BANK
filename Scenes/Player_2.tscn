@@ -153,11 +153,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m7m4b"]
-radius = 16.0
-height = 50.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6drji"]
+size = Vector2(22, 33)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=377428219]
+collision_layer = 2
 script = ExtResource("1_0mydc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=560242652]
@@ -168,5 +168,5 @@ animation = &"Idle"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=736215192]
-position = Vector2(-4, 1)
-shape = SubResource("CapsuleShape2D_m7m4b")
+position = Vector2(-3, 6.5)
+shape = SubResource("RectangleShape2D_6drji")

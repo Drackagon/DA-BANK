@@ -1,6 +1,13 @@
 [gd_scene format=3 uid="uid://b5pw2dix03ifb"]
 
-[node name="SplitScreen" type="CanvasLayer" unique_id=423324856]
+[ext_resource type="Script" uid="uid://bgdrx2l1vvfn1" path="res://Scenes/SplitScreen.cs" id="1_o1wv2"]
+[ext_resource type="PackedScene" uid="uid://c37uekc3y2in1" path="res://Scenes/Player_1.tscn" id="2_4qopw"]
+[ext_resource type="PackedScene" uid="uid://bddtakrvwks4o" path="res://Scenes/Player_2.tscn" id="3_yikt4"]
+
+[node name="SplitScreen" type="CanvasLayer" unique_id=423324856 node_paths=PackedStringArray("Player1", "Player2")]
+script = ExtResource("1_o1wv2")
+Player1 = NodePath("CharacterBody2D")
+Player2 = NodePath("CharacterBody2D2")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1878020119]
 anchors_preset = 15
@@ -13,11 +20,12 @@ theme_override_constants/separation = 0
 [node name="SubViewportContainer" type="SubViewportContainer" parent="VBoxContainer" unique_id=824439886]
 layout_mode = 2
 size_flags_vertical = 3
+stretch = true
 
 [node name="SubViewport0" type="SubViewport" parent="VBoxContainer/SubViewportContainer" unique_id=77374452]
 unique_name_in_owner = true
 handle_input_locally = false
-size = Vector2i(1280, 360)
+size = Vector2i(1152, 638)
 render_target_update_mode = 4
 
 [node name="ColorRect" type="ColorRect" parent="VBoxContainer" unique_id=1745343177]
@@ -27,8 +35,19 @@ color = Color(0, 0, 0, 1)
 
 [node name="SubViewportContainer2" type="SubViewportContainer" parent="VBoxContainer" unique_id=1218720477]
 layout_mode = 2
+stretch = true
 
 [node name="SubViewport1" type="SubViewport" parent="VBoxContainer/SubViewportContainer2" unique_id=107455163]
+unique_name_in_owner = true
 handle_input_locally = false
-size = Vector2i(1280, 360)
+size = Vector2i(1152, 2)
 render_target_update_mode = 4
+
+[node name="CharacterBody2D" parent="." unique_id=444781210 instance=ExtResource("2_4qopw")]
+position = Vector2(549, 154)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=2078525661]
+position = Vector2(26, 171)
+
+[node name="CharacterBody2D2" parent="." unique_id=377428219 instance=ExtResource("3_yikt4")]
+position = Vector2(531, 408)

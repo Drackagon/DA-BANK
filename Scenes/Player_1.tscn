@@ -186,6 +186,7 @@ animations = [{
 size = Vector2(22, 34)
 
 [node name="CharacterBody2D2" type="CharacterBody2D" unique_id=444781210]
+z_index = 3
 collision_layer = 2
 script = ExtResource("1_um20x")
 
@@ -198,3 +199,5 @@ autoplay = "Idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=725517325]
 position = Vector2(0, 11)
 shape = SubResource("RectangleShape2D_3wyh8")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=361845237]

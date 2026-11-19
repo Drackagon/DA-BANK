@@ -14,6 +14,7 @@ public partial class players: CharacterBody2D
 
     public override void _Ready()
     {
+        GD.Print(DeviceId);
         _animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
     }
 

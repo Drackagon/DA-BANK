@@ -4,50 +4,62 @@
 [ext_resource type="PackedScene" uid="uid://c37uekc3y2in1" path="res://Scenes/Player_1.tscn" id="2_4qopw"]
 [ext_resource type="PackedScene" uid="uid://bddtakrvwks4o" path="res://Scenes/Player_2.tscn" id="3_yikt4"]
 
-[node name="SplitScreen" type="CanvasLayer" unique_id=423324856 node_paths=PackedStringArray("Player1", "Player2")]
+[node name="SplitScreen" type="CanvasLayer" unique_id=423324856]
 script = ExtResource("1_o1wv2")
-Player1 = NodePath("CharacterBody2D")
-Player2 = NodePath("CharacterBody2D2")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1878020119]
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1258858368]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 0
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="VBoxContainer" unique_id=824439886]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="GridContainer" unique_id=824439886]
+custom_minimum_size = Vector2(576, 324)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewport1" type="SubViewport" parent="GridContainer/SubViewportContainer" unique_id=77374452]
+unique_name_in_owner = true
+handle_input_locally = false
+size = Vector2i(1152, 324)
+render_target_update_mode = 4
+
+[node name="Node" type="Node2D" parent="GridContainer/SubViewportContainer/SubViewport1" unique_id=1123572725]
+
+[node name="ColorRect" type="ColorRect" parent="GridContainer/SubViewportContainer/SubViewport1/Node" unique_id=1035733827]
+offset_left = -364.0
+offset_top = -399.0
+offset_right = 1571.0
+offset_bottom = 746.0
+
+[node name="CharacterBody2D" parent="GridContainer/SubViewportContainer/SubViewport1/Node" unique_id=444781210 instance=ExtResource("2_4qopw")]
+position = Vector2(169, 132)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="GridContainer/SubViewportContainer/SubViewport1/Node/CharacterBody2D" unique_id=1816991623]
+remote_path = NodePath("../../../Camera2D")
+
+[node name="CharacterBody2D2" parent="GridContainer/SubViewportContainer/SubViewport1/Node" unique_id=377428219 instance=ExtResource("3_yikt4")]
+position = Vector2(811, 154)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="GridContainer/SubViewportContainer/SubViewport1/Node/CharacterBody2D2" unique_id=712159509]
+remote_path = NodePath("../../../../../SubViewportContainer2/SubViewport2/Camera2D2")
+
+[node name="Camera2D" type="Camera2D" parent="GridContainer/SubViewportContainer/SubViewport1" unique_id=350792292]
+position = Vector2(169, 132)
+
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="GridContainer" unique_id=931954757]
+custom_minimum_size = Vector2(576, 324)
 layout_mode = 2
 size_flags_vertical = 3
 stretch = true
 
-[node name="SubViewport0" type="SubViewport" parent="VBoxContainer/SubViewportContainer" unique_id=77374452]
-unique_name_in_owner = true
+[node name="SubViewport2" type="SubViewport" parent="GridContainer/SubViewportContainer2" unique_id=699164624]
 handle_input_locally = false
-size = Vector2i(1152, 638)
+size = Vector2i(1152, 324)
 render_target_update_mode = 4
 
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer" unique_id=1745343177]
-custom_minimum_size = Vector2(0, 10)
-layout_mode = 2
-color = Color(0, 0, 0, 1)
-
-[node name="SubViewportContainer2" type="SubViewportContainer" parent="VBoxContainer" unique_id=1218720477]
-layout_mode = 2
-stretch = true
-
-[node name="SubViewport1" type="SubViewport" parent="VBoxContainer/SubViewportContainer2" unique_id=107455163]
-unique_name_in_owner = true
-handle_input_locally = false
-size = Vector2i(1152, 2)
-render_target_update_mode = 4
-
-[node name="CharacterBody2D" parent="." unique_id=444781210 instance=ExtResource("2_4qopw")]
-position = Vector2(549, 154)
-
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=2078525661]
-position = Vector2(26, 171)
-
-[node name="CharacterBody2D2" parent="." unique_id=377428219 instance=ExtResource("3_yikt4")]
-position = Vector2(531, 408)
+[node name="Camera2D2" type="Camera2D" parent="GridContainer/SubViewportContainer2/SubViewport2" unique_id=2021006341]
+position = Vector2(811, 154)

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://7m27khhta0dx"
+path="res://.godot/imported/Order_Filled - QuickSounds.com.mp3-8d16aa1ce4418fae9a7159cae3c8d6a1.mp3str"
+
+[deps]
+
+source_file="res://soung_Effects/Order_Filled - QuickSounds.com.mp3"
+dest_files=["res://.godot/imported/Order_Filled - QuickSounds.com.mp3-8d16aa1ce4418fae9a7159cae3c8d6a1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

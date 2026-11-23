@@ -8,7 +8,7 @@ signal payday_triggered(amount_paid: int)
 
 var balance: int = 500
 var base_salary: int = 100
-var tax_rate: float = 0.10 # 10% deduction
+//var tax_rate: float = 0.10 # 10% deduction
 
 func add_money(amount: int) -> void:
 	balance += amount

@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://bgdrx2l1vvfn1" path="res://Scenes/SplitScreen.cs" id="1_o1wv2"]
 [ext_resource type="PackedScene" uid="uid://c37uekc3y2in1" path="res://Scenes/Player_1.tscn" id="2_4qopw"]
 [ext_resource type="PackedScene" uid="uid://bddtakrvwks4o" path="res://Scenes/Player_2.tscn" id="3_yikt4"]
+[ext_resource type="PackedScene" uid="uid://dbsly8gmeuwq0" path="res://Scenes/map.tscn" id="4_yikt4"]
 
-[node name="4_player_SplitScreen" type="CanvasLayer" unique_id=423324856]
+[node name="2_player_SplitScreen" type="CanvasLayer" unique_id=423324856]
 script = ExtResource("1_o1wv2")
 
 [node name="GridContainer" type="GridContainer" parent="." unique_id=1258858368]
@@ -27,13 +28,10 @@ handle_input_locally = false
 size = Vector2i(1152, 324)
 render_target_update_mode = 4
 
-[node name="Node" type="Node2D" parent="GridContainer/SubViewportContainer/SubViewport1" unique_id=1123572725]
+[node name="Map" parent="GridContainer/SubViewportContainer/SubViewport1" unique_id=729446096 instance=ExtResource("4_yikt4")]
+position = Vector2(417, 67)
 
-[node name="ColorRect" type="ColorRect" parent="GridContainer/SubViewportContainer/SubViewport1/Node" unique_id=1035733827]
-offset_left = -364.0
-offset_top = -399.0
-offset_right = 1571.0
-offset_bottom = 746.0
+[node name="Node" type="Node2D" parent="GridContainer/SubViewportContainer/SubViewport1" unique_id=1123572725]
 
 [node name="CharacterBody2D" parent="GridContainer/SubViewportContainer/SubViewport1/Node" unique_id=444781210 instance=ExtResource("2_4qopw")]
 position = Vector2(169, 132)

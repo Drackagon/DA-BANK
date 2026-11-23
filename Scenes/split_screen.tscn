@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c37uekc3y2in1" path="res://Scenes/Player_1.tscn" id="2_4qopw"]
 [ext_resource type="PackedScene" uid="uid://bddtakrvwks4o" path="res://Scenes/Player_2.tscn" id="3_yikt4"]
 
-[node name="SplitScreen" type="CanvasLayer" unique_id=423324856]
+[node name="4_player_SplitScreen" type="CanvasLayer" unique_id=423324856]
 script = ExtResource("1_o1wv2")
 
 [node name="GridContainer" type="GridContainer" parent="." unique_id=1258858368]

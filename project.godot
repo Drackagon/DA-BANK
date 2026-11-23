@@ -15,6 +15,10 @@ run/main_scene="uid://s1y7su74vicc"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Payroll_tscn="*uid://hml50ys1tjso"
+
 [display]
 
 window/stretch/mode="canvas_items"

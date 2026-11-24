@@ -14,7 +14,7 @@ public partial class Bank1 : TileMapLayer
 		if (body is players)
 		{
 			GD.Print("Player 1 entered");
-			body.Position = new Vector2(3000.0f, 0);;
+			body.Position = new Vector2(3000.0f, 75.0f);
 
 		}
 	}
